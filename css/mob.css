@@ -1,0 +1,1216 @@
+:root {
+  -webkit-touch-callout: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* @media screen and (orientation:portrait) { */
+
+html#myHTML {
+  padding: 0px;
+  margin: 0px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-size: 4vw;
+  margin: 0px;
+  margin-top: 10vw;
+  padding: 0px
+}
+
+.webonly,
+.webOnly {
+  display: none;
+}
+
+.mobileOnly {
+  display: inherit;
+}
+
+
+h1,
+h2,
+h3 {
+  margin-bottom: 2vw;
+  margin-top: 4vw;
+}
+
+
+
+
+
+.topFixed {
+  position: fixed;
+  height: 9vw;
+  width: 100vw;
+  top: 0vw;
+  left: 0vw;
+}
+
+.topFixed .logo {
+  top: 2vw;
+  left: 1vw;
+  margin: auto;
+}
+
+.topFixed .logo img {
+  max-width: 10vw;
+}
+
+
+
+
+
+
+leftright {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.LeftPanel {
+  overflow: hidden;
+  overflow-y: scroll;
+  min-width: unset;
+  max-width: unset;
+  position: unset;
+}
+
+
+.RightPanel {
+  margin-left: unset;
+}
+
+
+
+boxes>div.scroller {
+  flex-wrap: nowrap;
+  -webkit-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  /* Enable Safari touch scrolling physics which is needed for scroll snap */
+
+  -webkit-overflow-scrolling: touch;
+  justify-content: flex-start;
+  align-items: start;
+  padding-bottom: 1vw;
+}
+
+box {
+  width: 1000vw;
+  max-width: 46.3333vw;
+  min-width: 46.3333vw;
+  max-height: 12vw;
+  min-height: 12vw;
+  margin-right: 2vw;
+  margin-bottom: 2vw;
+  padding: 1vw;
+  border-radius: 1vw;
+  border: 0.3vw solid var(--bgd);
+  /* -webkit-box-shadow: 6px 6px 7px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 6px 6px 7px -2px rgba(0, 0, 0, 0.5); */
+  box-shadow: 1vw 1vw 1vw -0.5vw rgba(0, 0, 0, 0.5);
+}
+
+box.empty {
+  box-shadow: unset;
+  border: unset;
+  background-color: transparent;
+}
+
+
+boxes>div.scroller>box:nth-child(2) {
+  -webkit-scroll-snap-stop: unset;
+  scroll-snap-stop: unset;
+}
+
+boxes>div.scroller>box:nth-last-child(2) {
+  -webkit-scroll-snap-stop: unset;
+  scroll-snap-stop: unset;
+}
+
+
+boxes.micro {
+  min-height: unset;
+}
+
+boxes.mini {
+  min-height: 14vw;
+  max-height: 15vw;
+}
+
+boxes.small {
+  min-height: unset;
+}
+
+boxes.medium {
+  min-height: unset;
+}
+
+boxes.large {
+  min-height: unset;
+}
+
+boxes.xlarge {
+  min-height: unset;
+}
+
+
+boxes.micro>div.scroller>box {
+  min-height: 12vw !important;
+  max-height: 12vw;
+}
+
+boxes.small>div.scroller>box {
+  min-height: 15vw;
+}
+
+boxes.medium>div.scroller>box {
+  min-height: 20vw;
+}
+
+boxes.large>div.scroller>box {
+  min-height: 40vw;
+}
+
+boxes.xlarge>div.scroller>box {
+  min-height: 60vw;
+  border-radius: 2vw;
+}
+
+
+box.micro {
+  min-width: 12vw;
+  max-width: 12vw;
+  min-height: 12vw;
+  max-height: 12vw;
+}
+
+box.mini {
+  min-width: 30.3333vw;
+  max-width: 30.3333vw;
+  line-height: 1em;
+}
+
+box.micro>hint {
+  bottom: 1vw;
+  left: 1.6vw;
+}
+
+box.small {
+  min-width: 30.3333vw;
+  max-width: 30.3333vw;
+}
+
+box.medium {
+  min-width: 46.5vw;
+  -webkit-scroll-snap-stop: always;
+  scroll-snap-stop: always;
+  max-width: 46.5vw;
+}
+
+box.large {
+  min-width: 62.6666vw;
+  -webkit-scroll-snap-stop: always !important;
+  scroll-snap-stop: always !important;
+}
+
+box.xlarge {
+  min-width: 93vw;
+  -webkit-scroll-snap-stop: always !important;
+  scroll-snap-stop: always !important;
+}
+
+box.xlarge.single {
+  min-width: 100vw;
+}
+
+box.xlarge.freeheight {
+  padding: 3vw;
+  padding-bottom: 1vw;
+}
+
+box.xlarge.panel.freeheight.full {
+  max-height: unset;
+  height: calc(100vh - 15vw);
+}
+
+box.free {
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+
+
+boxes.micro box name {
+  top: 1vw;
+  left: 1vw;
+  width: calc(100% - 2vw);
+}
+
+boxes.micro box hint {
+  bottom: 1vw;
+  left: 1vw;
+  width: calc(100% - 2vw);
+}
+
+boxes.mini box name {
+  line-height: 0.8em;
+}
+
+boxes.small box name {
+  max-height: 1.6em;
+}
+
+
+
+box.account balance {
+  bottom: 0vw;
+  right: 1vw;
+}
+
+
+
+
+box.panel boxes.bottomrow {
+  width: calc(100% - 5vw);
+  bottom: 2vw;
+}
+
+
+
+
+
+input {
+  padding: 1vw;
+  font-size: 2em;
+  min-width: 30.3333vw;
+  width: 30.3333vw;
+  height: 12vw;
+  margin-right: 2vw;
+  margin-bottom: 2vw;
+  border-radius: 1vw;
+  box-shadow: inset 0.2vw 0.2vw 1vw rgba(255, 255, 255, 0.6), inset -0.2vw -0.5vw 1vw rgba(0, 0, 0, 0.6), 0 0.2vw 2vw rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0.5vw 1vw 1px rgba(0, 0, 0, 0.14), 0 0.2vw 1vw 0.5vw rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+input.micro {
+  min-width: 14.1666vw;
+  max-width: 14.1666vw;
+  width: 14.1666vw;
+}
+
+input.long {
+  min-width: 79.63vw;
+  max-width: 80.23vw;
+  /* width: 82.63vw; */
+}
+
+input.wide {
+  width: 100%;
+  max-width: 99vw;
+}
+
+
+
+select {
+  padding: 1vw;
+  font-size: 2em;
+  min-width: 30.3333vw;
+  width: 30.3333vw;
+  height: 12vw;
+  margin-right: 2vw;
+  margin-bottom: 2vw;
+  border-radius: 1vw;
+  box-shadow: inset 0.2vw 0.2vw 1vw rgba(255, 255, 255, 0.6), inset -0.2vw -0.5vw 1vw rgba(0, 0, 0, 0.6), 0 0.2vw 2vw rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0.5vw 1vw 1px rgba(0, 0, 0, 0.14), 0 0.2vw 1vw 0.5vw rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+select.wide {
+  width: calc(100% - 1vw);
+}
+
+
+
+
+
+
+box>name {
+  /* top: 1vw; */
+  left: 1vw;
+  width: calc(100% - 2vw);
+  padding-bottom: 1vw;
+  max-height: 2.6em;
+  height: fit-content;
+}
+
+box>hint {
+  bottom: 1vw;
+  left: 1vw;
+  width: calc(100% - 2vw);
+}
+
+box.large>hint {
+  bottom: unset;
+  top: 6vw;
+}
+
+box.xlarge>hint {
+  bottom: unset;
+  top: 6vw;
+}
+
+box.xlarge>bottompit {
+  bottom: 2vw;
+  max-width: calc(100% - 6vw);
+}
+
+box.mini>name {
+  top: 0vw;
+  line-height: 0.8em;
+}
+
+
+img.thumbnail {
+  max-width: 20vw;
+}
+
+
+decimal {
+  margin-left: 0vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* here goes the section for the main screen */
+.mainscreen boxes>div.scroller>box {
+  -webkit-scroll-snap-stop: always;
+  scroll-snap-stop: always;
+}
+
+.mainscreen boxes.accounts {
+  min-height: calc(100vh - 130vw);
+  margin-bottom: 2vw;
+}
+
+.mainscreen boxes.accounts>div.scroller>box {
+  min-height: 100%;
+  min-width: 95vw;
+  -webkit-scroll-snap-stop: always !important;
+  scroll-snap-stop: always !important;
+}
+
+.mainscreen boxes.accounts>div.scroller>box>name {}
+
+.mainscreen boxes.accounts>div.scroller>box>balance {
+  top: 2.3vw;
+  right: 1vw;
+}
+
+
+.mainscreen boxes.accounts>div.scroller>box>ministatement {
+  top: 10vw;
+  left: 1vw;
+  width: calc(100% - 2vw);
+  max-height: calc(100% - 12vw);
+}
+
+
+.mainscreen boxes.accounts>div.scroller>box>ministatement>line>dts {
+  margin-right: 1vw;
+}
+
+
+
+
+.mainscreen boxes.accounts>div.scroller>box.stacked.account {
+  min-width: 46.5vw;
+}
+
+
+
+.mainscreen boxes.accounts>div.scroller>box.action {
+  min-width: 46.5vw;
+  -webkit-scroll-snap-stop: unset !important;
+  scroll-snap-stop: unset !important;
+}
+
+.mainscreen boxes.accounts>div.scroller>box.stacked.account {
+  -webkit-scroll-snap-stop: unset !important;
+  scroll-snap-stop: unset !important;
+}
+
+
+
+.mainscreen boxes>div.scroller>box>name {
+  font-size: 1.4em;
+  line-height: 1.2em;
+  max-height: 2.2em;
+}
+
+.mainscreen boxes.cards {
+  margin-bottom: 0vw;
+}
+
+.mainscreen boxes.cards>div.scroller>box {
+  min-height: 29vw;
+  min-width: 46.5vw;
+  border: none;
+  background-color: transparent;
+}
+
+.mainscreen boxes.cards>div.scroller>box img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  border-radius: 1vw;
+}
+
+
+.mainscreen boxes.beneficiaries {
+  min-height: 20vw;
+}
+
+.mainscreen boxes.beneficiaries>div.scroller>box {
+  min-height: 20vw;
+  min-width: 46.5vw;
+}
+
+
+.mainscreen boxes.misc {
+  min-height: 18vw;
+}
+
+.mainscreen boxes.misc>div.scroller>box {
+  min-height: 18vw;
+  min-width: 46.5vw;
+}
+
+
+
+.mainscreen box.card>num {
+  left: 4vw;
+  bottom: 8vw;
+  font-size: 2.5vw;
+}
+
+.mainscreen box.card>nameoncard {
+  bottom: 1vw;
+  left: 4vw;
+  font-size: 2.5vw;
+}
+
+.mainscreen box.card>expiry {
+  bottom: 4vw;
+  left: 18vw;
+  font-size: 1.9vw;
+}
+
+
+
+/* end of main screen section */
+
+
+
+box>minilines {
+  width: calc(100% - 2vw);
+}
+
+box.account>minilines {
+  bottom: unset;
+  top: 3em;
+}
+
+box.account>minilines>miniline>narrative {
+  margin-right: 2vw;
+  margin-left: 1vw;
+  white-space: nowrap;
+  overflow-x: hidden;
+  flex-grow: 2;
+  text-overflow: ellipsis;
+}
+
+
+
+
+card.bigCard name {
+  bottom: 3vw;
+  left: 11vw;
+  font-size: 5vw;
+}
+
+card.bigCard num {
+  bottom: 20vw;
+  left: 11vw;
+  font-size: 5.2vw;
+}
+
+card.bigCard expiry {
+  bottom: 12vw;
+  font-size: 3.5vw;
+  left: 39vw;
+}
+
+
+
+
+
+
+
+statement {
+  margin-left: unset;
+}
+
+statement transactions transaction {
+  max-width: 98vw;
+}
+
+statement transaction line {
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+
+
+statement transaction line dts {
+  margin-right: 1vw;
+}
+
+
+
+
+
+
+
+
+keyvaluelarge {
+  max-width: 99vw;
+  margin-right: 2vw;
+  margin-bottom: 2vw;
+}
+
+keyvaluelarge h2 {
+  margin-top: 1vw;
+}
+
+
+keyvaluelarge>keyvalue {
+  margin-bottom: 2vw;
+}
+
+keyvaluelarge key {
+  margin-right: 2vw;
+}
+
+keyvaluelarge value {
+  flex-grow: 2;
+}
+
+boxrow {
+  margin-right: 2vw;
+}
+
+box.panel>boxrow.topright {
+  top: 2vw;
+  right: 1vw;
+  justify-content: flex-end;
+}
+
+boxrow>box {
+  min-height: 10vw !important;
+  height: 10vw;
+  max-height: 10vw !important;
+}
+
+
+
+
+keyvaluepanel {
+  margin-bottom: 2vw;
+}
+
+keyvaluepanel keyvalue {
+  min-width: 40vw;
+  margin-right: 2vw;
+  margin-bottom: 2vw;
+}
+
+keyvaluepanel keyvalue key {
+  margin-right: 2vw;
+}
+
+
+
+
+card.bigCard {
+  width: 100vw;
+  max-width: 100vw;
+  margin-right: unset;
+}
+
+card.bigCard img {
+  width: calc(100% - 1vw);
+  border-radius: 3vw;
+  -webkit-box-shadow: 6px 6px 7px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 6px 6px 7px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 6px 6px 7px -2px rgba(0, 0, 0, 0.5);
+}
+
+img.card {
+  border-radius: 3vw;
+  -webkit-box-shadow: 6px 6px 7px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 6px 6px 7px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 6px 6px 7px -2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+.material-icons {
+  line-height: 0.7em;
+  font-size: 4vw;
+}
+
+
+
+#cardadvice {
+  height: 15vw;
+}
+
+boxes.cards>div.scroller>box {
+  min-height: 28vw;
+}
+
+
+boxes.cards>div.scroller>box.card img.nfc {
+  top: 1vw;
+  right: 1vw;
+  left: unset;
+  width: 4vw;
+}
+
+boxes.cards>div.scroller>box.card .lk {
+  top: 2vw;
+  right: 8vw;
+}
+
+
+
+
+
+
+.mobileminheight3em {
+  min-height: 3em;
+}
+
+.mobileminheight4em {
+  min-height: 4em;
+}
+
+.mobileminheight5em {
+  min-height: 5em;
+}
+
+.mobileminheight7em {
+  min-height: 7em;
+}
+
+.mobileminheight9em {
+  min-height: 9em;
+}
+
+.mobileminheight10em {
+  min-height: 10em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lastMessages {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  width: 100%;
+  font-size: 4vw;
+}
+
+
+.lastMessages .message {
+  font-size: 3.5vw;
+}
+
+.lastMessages .message .messageText {}
+
+.lastMessages .message .undo {}
+
+
+
+
+
+
+
+
+.login-mobile butPad {
+  white-space: normal;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+.login-mobile butPad but {
+  width: 25vw;
+  height: 25vw;
+  max-height: 20vh;
+  margin-top: 1vw;
+  display: inline-flex;
+  align-items: center;
+  font-size: 17vw;
+  justify-content: center;
+  background-color: var(--bgd);
+}
+
+.login-mobile butPad but:hover {
+  filter: brightness(150%);
+  -webkit-filter: brightness(150%);
+}
+
+.login-mobile indicator {
+  min-height: 18vw;
+  display: block;
+  text-align: center;
+  font-size: 15vw;
+  line-height: 15vw;
+}
+
+
+
+
+
+
+.qr {
+  /* height: -webkit-fill-available; */
+}
+
+.qr .window {
+  height: calc(100vh - 75vw);
+  /* background-color: red; */
+  position: relative;
+}
+
+.qr .boxes {
+  height: 20vw;
+}
+
+.qr .window img.tl {
+  position: absolute;
+  top: 1vh;
+  left: 1vw;
+  width: 5vw;
+}
+
+.qr .window img.tr {
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+  width: 5vw;
+}
+
+.qr .window img.lr {
+  position: absolute;
+  bottom: 1vh;
+  right: 1vw;
+  width: 5vw;
+}
+
+.qr .window img.ll {
+  position: absolute;
+  bottom: 1vh;
+  left: 1vw;
+  width: 5vw;
+}
+
+
+
+
+
+
+
+
+
+
+.bottomright {
+  width: auto;
+  position: fixed;
+  bottom: 1vw;
+  right: 1vw;
+}
+
+
+
+
+
+utilizationbar {
+  width: 10vw;
+  margin-right: 2vw;
+}
+
+
+
+
+
+div.onboarding corecontent {
+  width: 100%;
+  /* height: calc(100vh - 35vw); */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+div.onboarding corecontent img {
+  max-width: 100vw;
+}
+
+div.onboarding corecontent centraltext {
+  font-size: 1.5em;
+  margin: 1em;
+}
+
+
+screenbottom {
+  position: fixed;
+  bottom: 1vw;
+  width: 100%;
+}
+
+screenbottom boxes {
+  justify-content: space-between;
+}
+
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url("images/static_poster1.jpg") no-repeat;
+  background-size: cover;
+}
+
+
+
+div.onboarding boxes.xlarge {
+  max-height: calc(100vh - 36vw);
+}
+
+div.onboarding boxes.xlarge box.xlarge {
+  max-height: calc(100vh - 36vw);
+  min-width: 89vw;
+  width: 89vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.mainscreen boxes.firstContactAccounts {
+  height: auto;
+  margin-bottom: 2vw;
+}
+
+
+.mainscreen boxes.firstContactAccounts>div.scroller>box {
+  max-height: 27vw;
+  max-height: unset;
+  min-height: 27vw;
+}
+
+.mainscreen boxes.firstContactAccounts>div.scroller>box balance {
+  font-size: 1.5em;
+  bottom: 1vw;
+}
+
+
+
+
+
+
+
+
+.firstContact .mainscreen boxes.misc {
+  max-height: auto;
+}
+
+.firstContact .mainscreen boxes.misc box {
+  min-height: 22vw;
+}
+
+
+
+.firstContact .mainscreen boxes.beneficiaries {
+  min-height: 22vw;
+}
+
+.firstContact .mainscreen boxes.beneficiaries>div.scroller>box {
+  min-height: 22vw;
+}
+
+.noFamilyActiveUser .mainscreen boxes.beneficiaries {
+  min-height: 26vw;
+}
+
+.noFamilyActiveUser .mainscreen boxes.beneficiaries>div.scroller>box {
+  min-height: 26vw;
+}
+
+.noFamilyActiveUser .mainscreen boxes.misc {
+  min-height: 26vw;
+}
+
+.noFamilyActiveUser .mainscreen boxes.misc>div.scroller>box {
+  min-height: 26vw;
+}
+
+
+.noFamilyActiveUser .mainscreen boxes.misc.familymembers {
+  display: none;
+}
+
+
+
+
+
+
+
+boxes#idleteen1 {
+  height: 90vh;
+  min-height: unset;
+  max-height: unset;
+  max-height: 90vh;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+
+boxes#idleteen1 box.xlarge.panel.freeheight {
+  max-height: 89vh;
+}
+
+
+
+@keyframes splash {
+  from {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1, 1);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+.animateAppearSlow {
+  animation: splash 1s normal forwards;
+}
+
+
+
+
+
+
+
+
+
+itemlist>item {
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+
+
+
+
+
+atms {
+  display: block;
+}
+
+atms atm {
+  display: flex;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+atms atm direction {
+  min-width: 5rem;
+}
+
+
+
+#settingsprofilepic {
+  justify-content: center;
+  align-items: center;
+}
+
+#settingsprofilepic>box {
+  height: 12vw;
+  max-height: unset;
+  text-align: center;
+}
+
+#settingsprofilepic>box.face {
+  width: 20vw;
+  min-height: 20vw;
+  height: 20vw;
+  padding: 0px;
+  border-radius: 10vw;
+  margin-right: 7vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+div.settings alerts {
+  display: flex;
+  flex-direction: column;
+}
+
+div.settings alerts>alert {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+div.settings alerts>alert status {
+  display: block;
+}
+
+div.settings alerts>alert>nameandhint>name {
+  display: block;
+  font-size: 5vw;
+}
+
+
+
+
+someitems {
+  display: flex;
+  flex-direction: column;
+}
+
+someitems>someitem {
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+someitems>someitem>box.face {
+  width: 15vw;
+  min-width: unset;
+  height: 15vw;
+  min-height: unset;
+  max-height: unset;
+  border-radius: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+someitems>someitem>name {
+  flex-grow: 2;
+}
+
+
+
+someitems>someitem>box.face>img {
+  width: 105%;
+  max-width: unset;
+  height: unset;
+  border-radius: 7vw;
+  overflow: hidden;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+
+
+spinner {
+  animation: rotation 2s infinite linear;
+  display: block;
+}
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

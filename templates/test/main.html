@@ -1,0 +1,188 @@
+<div class="mainscreen" ng-init="">
+
+
+  <div ng-if="TheM.statics.testData">
+
+    <span
+      ng-init="TheM.chosenPersonAWSMUserId = TheM.statics.testData.children[0].AWSMUserId; member = TheM.statics.testData.children[0];"></span>
+
+
+    <boxes class="faces large">
+      <div class="scroller">
+        <box class="face large" ng-repeat="child in TheM.statics.testData.children"
+          ng-click="TheM.chosenPersonAWSMUserId = child.AWSMUserId; member = child"
+          ng-class="{'chosen': TheM.chosenPersonAWSMUserId === child.AWSMUserId}">
+          <img src="images/defaultProfilePicture.png" ng-src="data:image/png;base64, {{child.faceImage}}" />
+          <name ng-bind="child.firstName" ng-if="!child.faceImage"></name>
+        </box>
+        <box class="face large"
+          ng-click="TheM.chosenPersonAWSMUserId = TheM.statics.testData.user.AWSMUserId; member = TheM.statics.testData.user;"
+          ng-class="{'chosen': TheM.chosenPersonAWSMUserId === TheM.statics.testData.user.AWSMUserId}">
+          <img src="images/defaultProfilePicture.png"
+            ng-src="data:image/png;base64, {{TheM.statics.testData.user.faceImage}}"
+            ng-if="TheM.statics.testData.user.faceImage" />
+          <name ng-if="!TheM.statics.testData.user.faceImage">You</name>
+        </box>
+        <smalladdbutton ng-click="go('newfamilymember');">
+          <i class="material-icons">
+            add
+          </i>
+        </smalladdbutton>
+
+      </div>
+    </boxes>
+    <div>
+
+
+      <boxes ng-if="TheM.chosenPersonAWSMUserId === TheM.statics.testData.user.AWSMUserId">
+        <box class="half" ng-click="go('fundstransfer');" ng-class="{'dimmed' : 2>TheM.accounts.length}">
+          <centername>Transfer</centername>
+        </box>
+        <box class="half" ng-click="go('topup/'+selectedAWSMAccountId);">
+          <centername>Fund the account</centername>
+        </box>
+      </boxes>
+
+
+      <boxes ng-if="TheM.chosenPersonAWSMUserId !== TheM.statics.testData.user.AWSMUserId">
+        <box class="third" ng-click="go('give/'+TheM.chosenPersonAWSMUserId);">
+          <centername>Money <i style="color:#2CD8D0" class="material-icons">
+              add
+            </i></centername>
+        </box>
+        <box class="third" ng-click="go('take/'+TheM.chosenPersonAWSMUserId);">
+          <centername>Money <i style="color:#FF547F;" class="material-icons">
+              remove
+            </i></centername>
+        </box>
+        <box class="third" ng-click="go('allowances/'+TheM.chosenPersonAWSMUserId);">
+          <centername>Allowance <i style="color:#ffd400" class="material-icons">
+              sentiment_satisfied_alt
+            </i></centername>
+        </box>
+      </boxes>
+
+      <br />
+      <br />
+      <boxes ng-init="temp.isFirst = true;">
+        <box class="half" ng-class="{'unchecked': !temp.isFirst}" ng-click="temp.isFirst = !temp.isFirst">
+          <centername>First</centername>
+        </box>
+        <box class="half" ng-class="{'unchecked': !temp.isSecond}" ng-click="temp.isSecond = !temp.isSecond">
+          <centername>Second</centername>
+        </box>
+      </boxes>
+
+      <br />
+      <br />
+      <boxes>
+        <box class="half dimmed">
+          <centername>Disabled</centername>
+        </box>
+        <box class="half" ng-class="{'dimmed': !temp.isSecond}" ng-click="temp.isSecond = !temp.isSecond">
+          <centername>Enable me</centername>
+        </box>
+      </boxes>
+
+      <br />
+      <br />
+      <center>
+        <box class="half blue">
+          <centername>Action</centername>
+        </box>
+      </center>
+
+
+
+
+      <statement>
+        <transactions>
+          <transaction
+            ng-repeat="transaction in TheM.statics.testData.transactions | orderBy:'-dtsValue.valueOf()' track by transaction.transactionId">
+
+            <monthDivider ng-bind="moment(transaction.dtsValue).format('MMMM YYYY')"
+              ng-if="(moment(sortedTransactions[$index - 1].dtsValue).month()!==moment(transaction.dtsValue).month()) && ((transaction.credit > 0 || _account === false)) && (transaction.dtsValue > selectedAccount.filter.start) && (transaction.dtsValue < selectedAccount.filter.end)">
+
+            </monthDivider>
+            <line>
+              <dtsnarrative>
+                <narrative>
+                  {{(transaction.narrative || "Payment")}}</narrative>
+                <dts>
+                  <date ng-bind="transaction.dtsValue | Date"></date>
+                  <time ng-bind="transaction.dtsValue | Time"></time>
+                  <span ng-if="transaction.isPending">Pending</span>
+                </dts>
+              </dtsnarrative>
+              <amount ng-class="{'credit': transaction.credit>0}">
+                {{transaction.amount | money}}
+              </amount>
+            </line>
+
+          </transaction>
+        </transactions>
+      </statement>
+
+
+
+
+    </div>
+
+    <!-- <span ng-init="go('assign/course002/awsmusrdvuxcgskqg')"></span> -->
+
+
+
+
+
+
+
+
+
+
+    <bottompanel class="ng-scope">
+      <!-- <but ng-click="go('main');"><i class="material-icons">home</i>
+        <name>Home</name>
+      </but> -->
+      <but class="chosen" ng-click="go('banking');"><i class="material-icons">credit_card</i>
+        <name>Spending</name>
+      </but>
+      <but ng-click="go('savings');"><svg width="6vw" height="5vw" viewBox="0 0 34 28" version="1.1"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(-56.000000, -738.000000)" fill="#214969">
+              <g transform="translate(56.000000, 738.000000)">
+                <path
+                  d="M17.54536,0.339966 C21.0452022,0.339966 23.895599,3.1750126 23.9205351,6.66909058 C26.544247,7.77445638 28.6507464,9.48990372 29.896132,11.561938 C30.148752,11.219218 30.391512,10.820738 30.596192,10.345418 C29.259992,9.689218 28.327712,8.590678 28.327712,7.426178 C28.327712,6.254538 29.281412,5.301178 30.452712,5.301178 C31.624012,5.301178 32.577712,6.254538 32.577712,7.426178 C32.577712,8.172478 32.499512,8.849758 32.363852,9.459378 C32.656252,9.519218 32.965652,9.551178 33.286952,9.551178 C33.677612,9.551178 33.994832,9.867038 33.994832,10.259058 C33.994832,10.650738 33.678632,10.966938 33.286952,10.966938 C32.826252,10.966938 32.372012,10.913558 31.937492,10.815298 C31.561792,11.721058 31.067772,12.418398 30.588372,12.953558 C30.956252,13.898078 31.163312,14.892918 31.163312,15.924818 C31.163312,18.770958 29.618692,21.516118 26.913312,23.506818 L26.913312,23.506818 L26.913312,27.257698 C26.913312,27.648018 26.597112,27.965578 26.205432,27.965578 L26.205432,27.965578 L23.372552,27.965578 C23.104292,27.965578 22.859832,27.813938 22.739132,27.573558 L22.739132,27.573558 L21.901032,25.897698 C18.766232,26.762318 15.229892,26.762318 12.095432,25.897698 L12.095432,25.897698 L11.257332,27.573558 C11.136632,27.813938 10.892172,27.965578 10.623912,27.965578 L10.623912,27.965578 L7.791032,27.965578 C7.399012,27.965578 7.083152,27.649378 7.083152,27.257698 L7.083152,27.257698 L7.083152,23.563938 L2.137172,20.482858 C0.799272,19.647478 -6.80000008e-05,18.209278 -6.80000008e-05,16.632698 C-6.80000008e-05,15.069718 1.270852,13.798458 2.834172,13.797098 L2.834172,13.797098 L3.133032,13.797098 C3.482212,12.516998 4.153032,11.281778 5.102652,10.172698 C4.548792,9.356018 4.249932,8.399598 4.249932,7.422098 C4.249932,7.031778 4.565792,6.714218 4.957812,6.714218 C6.057372,6.714218 7.109332,7.075638 7.972592,7.742378 C8.95658117,7.12914412 10.0384095,6.62467234 11.1872085,6.23654527 C11.4330815,2.94402141 14.1908007,0.339966 17.54536,0.339966 Z M16.999932,6.715578 C13.769932,6.715578 10.683412,7.601278 8.309872,9.212538 C8.032432,9.403618 7.661832,9.370298 7.418732,9.135358 C6.948512,8.679758 6.377652,8.368998 5.758512,8.224158 C5.890092,8.776658 6.159712,9.293458 6.555472,9.744978 C6.797212,10.020038 6.788032,10.435518 6.534392,10.701058 C5.402532,11.883238 4.660312,13.247318 4.387972,14.641998 C4.323032,14.973838 4.031992,15.214218 3.693352,15.214218 L3.693352,15.214218 L2.832812,15.214218 C2.051832,15.214218 1.415692,15.850358 1.415692,16.631338 C1.415692,17.715258 1.965472,18.706018 2.885852,19.279598 L2.885852,19.279598 L8.166052,22.569438 C8.373452,22.699658 8.499592,22.926778 8.499592,23.171238 L8.499592,23.171238 L8.499592,26.548458 L10.186332,26.548458 L11.094812,24.732858 C11.250192,24.423458 11.607192,24.272158 11.940732,24.374498 C15.144212,25.379878 18.856332,25.379878 22.058452,24.374498 C22.389272,24.269438 22.749332,24.420738 22.904712,24.732858 L22.904712,24.732858 L23.813192,26.548458 L25.499932,26.548458 L25.499932,23.141658 C25.499932,22.909438 25.614172,22.691498 25.805252,22.558558 C28.348792,20.795998 29.749932,18.440138 29.749932,15.923118 C29.749932,10.845558 24.029772,6.715238 16.999932,6.715238 Z M7.082812,12.382358 C7.863792,12.382358 8.499932,13.018498 8.499932,13.799478 C8.499932,14.580798 7.863792,15.216938 7.082812,15.216938 C6.301832,15.216938 5.665692,14.580798 5.665692,13.799478 C5.665692,13.018498 6.301832,12.382358 7.082812,12.382358 Z M17.000272,8.145618 C18.848512,8.145618 20.696072,8.388718 22.178132,8.874918 C22.551452,8.996978 22.753412,9.396818 22.631012,9.768778 C22.532752,10.067638 22.255312,10.255998 21.957812,10.255998 C21.884712,10.255998 21.810252,10.245458 21.737152,10.221658 C19.054892,9.339698 14.946672,9.339698 12.262372,10.221658 C11.893132,10.345078 11.492272,10.140398 11.368512,9.768778 C11.247812,9.396818 11.449772,8.996978 11.821392,8.874918 C13.303792,8.388718 15.151012,8.145618 16.999932,8.145618 L16.999932,8.145618 Z M30.457812,6.715238 C30.065792,6.715238 29.748572,7.032798 29.748572,7.423118 C29.748572,7.896058 30.234772,8.513498 31.022212,8.961278 C31.112652,8.495138 31.165692,7.982418 31.165692,7.423118 C31.165692,7.032798 30.848132,6.715238 30.457812,6.715238 L30.457812,6.715238 Z M17.54536,2.039966 C15.3014719,2.039966 13.4217425,3.62846056 12.9719656,5.74010436 C13.460558,5.63047212 13.957336,5.541442 14.460472,5.472538 L14.460472,5.472538 L20.705592,5.680618 C21.2061999,5.78252301 21.6958237,5.9044735 22.1728181,6.0452604 C21.8470234,3.78351506 19.8959027,2.039966 17.54536,2.039966 Z"
+                  id="Combined-Shape"></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+        <name>Saving</name>
+      </but>
+      <but ng-click="go('academy');"><svg width="5vw" height="6vw" viewBox="0 0 34 24" version="1.1"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+          <g id="device-mockup" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path
+              d="M32.9849882,7.0065355 L17.6876069,0.147090405 C17.2494083,-0.0490301349 16.7490412,-0.0490301349 16.3108426,0.147090405 L1.0134613,7.0065355 C0.398384601,7.28142772 0,7.89553078 0,8.57550805 C0,9.25548532 0.398368284,9.86957603 1.0134613,10.1444806 L4.41233545,11.6362906 L3.39410096,11.9963826 L3.39410096,23.1415405 C3.39410096,23.6157509 3.77334956,24 4.24341157,24 C4.71347358,24 5.09272218,23.615755 5.09272218,23.1415405 L5.09272218,13.0589628 L16.9912293,8.56748314 L14.9181282,7.64153213 L6.62246031,10.7794772 L1.69384803,8.56748314 L16.9912293,1.70803804 L32.2886106,8.56748314 L16.9912293,15.4269282 L10.7702942,12.6474702 L8.49322805,13.5058885 L16.2948925,16.934788 C16.7330911,17.1309086 17.2334582,17.1309086 17.6716568,16.934788 L25.4733213,13.5058885 L25.4733213,18.8558277 C23.1340865,20.9810293 20.1208695,22.1979347 16.9736883,22.2847272 C13.8265886,22.1979183 10.8147586,20.9809882 8.47568706,18.8558277 L8.47568706,13.5058885 L6.77543412,14.1408852 L6.77543412,19.5760118 L7.28534683,20.0727331 C9.94643848,22.5194249 13.3932852,23.9147714 16.9912293,24 C20.5781593,23.9244465 24.0170106,22.5483969 26.6795708,20.1241748 L27.1894835,19.6274536 L27.1894835,12.7680085 L32.9849474,10.1782264 C33.6016154,9.90494324 34,9.28923109 34,8.60925382 C34,7.93088153 33.6016317,7.31518584 32.9849474,7.04028127 L32.9849882,7.0065355 Z"
+              id="ico-toolbar-uni-learn" fill="#214969"></path>
+          </g>
+        </svg>
+        <name>Learning</name>
+      </but>
+      <but ng-click="go('jobs');"><i class="material-icons">emoji_nature</i>
+        <name>Chores</name>
+      </but>
+      <but ng-click="go('settings');">
+        <svg xmlns="http://www.w3.org/2000/svg" width="5vw" height="6vw" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          style="width:5vw; height:6vw;">
+          <circle cx="12" cy="12" r="1"></circle>
+          <circle cx="19" cy="12" r="1"></circle>
+          <circle cx="5" cy="12" r="1"></circle>
+        </svg>
+        <name>More</name>
+      </but>
+    </bottompanel>
+  </div>

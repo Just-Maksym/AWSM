@@ -1,0 +1,579 @@
+:root {
+  -webkit-touch-callout: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+
+:root {
+  --bkg: #ffffff;
+  --txt: #214969;
+  --butt: #FFFFFF;
+  --darkgreen: #2f6f0a;
+  --background: #f0f5f8;
+}
+
+@font-face {
+  font-family: 'effra';
+  src: url('../../fonts/effra/effra.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'effra';
+  src: url('../../fonts/effra/effrabold.woff') format('woff'); 
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Credit Card';
+  src: url('../../fonts/CREDC___.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal
+}
+
+
+
+body {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: var(--background);
+}
+
+
+
+.dimmed {
+  -webkit-filter: brightness(75%);
+  filter: blur(1.5px) brightness(75%);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  pointer-events: none;
+}
+
+
+
+
+
+ul.scrollable-list-horizontaly.header-profile>li.scrollable-list-horizontaly__item>name {
+  text-align: center;
+  max-width: 8vw;
+  overflow: hidden;
+  padding-top: 0.9vw;
+}
+
+
+.scrollable-list-horizontaly.header-profile .scrollable-list-horizontaly__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 11vw;
+  width: 11vw;
+  border-radius: 11vw;
+  opacity: 0.7;
+}
+
+
+
+
+
+.scrollable-list-horizontaly.header-profile .scrollable-list-horizontaly__item img {
+  width: 100%;
+  height: 100%;
+  opacity: unset;
+}
+
+
+.scrollable-list-horizontaly.header-profile .scrollable-list-horizontaly__item.active {
+  opacity: 1;
+  border: 0.6vw solid #50e3c2;
+  width: 12vw;
+  height: 12vw;
+}
+
+
+.scrollable-list-horizontaly.header-profile .scrollable-list-horizontaly__item {
+  border: 0.6vw solid #b3c2bf;
+  width: 10vw;
+  height: 10vw;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+decimal {
+  font-size: 0.7em;
+  vertical-align: top;
+  line-height: 1.4em;
+  opacity: 0.4;
+  color: inherit !important;
+}
+
+decimal::before {
+  content: ".";
+}
+
+
+scrollcontainer {
+  display: block;
+  position: relative;
+}
+
+scroller {
+  display: flex;
+  transform: translateZ(0);
+  flex-wrap: nowrap;
+  -webkit-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  justify-content: flex-start;
+  align-items: start;
+  padding-bottom: 1vw;
+  margin-left: -5vw;
+  min-width: 100vw;
+}
+
+scroller>boxcard {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  scroll-snap-align: center;
+  scroll-snap-stop: always !important;
+  position: relative;
+  padding: unset;
+  border: unset;
+  background-color: transparent;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 70vw;
+  height: 44vw;
+  margin-bottom: 2vw;
+}
+
+scroller>boxcard:nth-child(1) {
+  margin-left: 10vw;
+}
+
+scroller>boxcard.single {
+  margin: auto;
+  margin-bottom: 2vw;
+  margin-right: 15vw;
+}
+
+scroller>boxcard>card {
+  width: 100%;
+  height: fit-content;
+}
+
+
+
+
+scroller>stopper {
+  display: flex;
+  height: 2vw;
+  min-width: 0.1vw;
+}
+
+
+
+
+card {
+
+  position: relative;
+}
+
+card>svg {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.5);
+  border-radius: 4%;
+}
+
+
+
+
+
+dots {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-grow: 2;
+  margin: auto;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  height: 1vw;
+}
+
+dots>dot {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  border: 1px solid grey;
+  border-radius: 2vw;
+  height: 1vw;
+  width: 1vw;
+}
+
+dots>dot.active {
+  background-color: grey;
+}
+
+
+.mainscreen iconsharebutton {
+  position: absolute;
+  left: 7vw;
+  bottom: -3vw;
+  width: 5vw;
+  display: block;
+}
+
+.mainscreen iconsharebutton svg {
+  stroke: var(--txt);
+}
+
+
+
+
+
+.icon-plus-container {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.19);
+}
+
+.icon-plus-container>svg {
+  stroke: white;
+}
+
+
+
+#transactionfilterbutton.checked {
+  fill: grey;
+}
+
+
+
+
+
+
+
+
+
+
+face {
+  border-radius: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+}
+
+face.green {
+  border-color: #95eeda;
+}
+
+face.medium {
+  width: 20vw;
+  height: 20vw;
+  border: 1.5vw solid gray;
+}
+
+
+face>name {
+  display: block;
+  text-align: center;
+  padding-top: 0.2em;
+}
+
+
+face.medium>name {}
+
+
+
+
+
+.big-circle.send {
+  background: radial-gradient(closest-side, rgba(80, 227, 194, 0.7), rgba(0, 0, 0, 0));
+}
+
+
+
+
+
+
+
+
+
+
+div.flex.stretched {
+  justify-content: space-between;
+  width: 100%;
+  white-space: nowrap;
+}
+
+div.flex.stretched.even {
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+
+
+
+
+input.teen-field.valid {
+  color: #50e3c2 !important;
+}
+
+fixedbottom {
+  width: 100%;
+  position: fixed;
+  bottom: 0vw;
+  height: 31vw;
+  background: var(--background);
+}
+
+
+
+
+
+
+
+
+.button.blue {
+  background-color: #214969;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pinboxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
+
+pinboxes>pinbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F5F8;
+  min-width: 10vw;
+  height: 12vw;
+  border: 1px solid transparent;
+  border-radius: 2vw;
+  text-align: center;
+  font-size: 7vw;
+  background-color: white;
+}
+
+pinbox.infocus {
+  border-color: #6573FC;
+  caret-color: transparent;
+}
+
+pinpad {
+  display: block;
+  width: 100%;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+pinpad>keybutton {
+  width: 20vw;
+  display: inline-flex;
+  text-align: center;
+  max-height: 20vw;
+  height: 23vw;
+  border-radius: 2vw;
+  margin: 2vw;
+  justify-content: center;
+  align-items: center;
+  font-size: 9vw;
+  box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--butt);
+  border: 1px solid #F0F5F8;
+}
+
+pinpad>keybutton:active {
+  box-shadow: none;
+  color: lightgray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+svg.feather.feather-circle.done {
+  stroke: #50E3C2;
+}
+
+
+
+
+
+statement transaction line .declined {
+  text-decoration: line-through;
+}
+
+
+statement transaction line .pending {
+  color: var(--humbleColor);
+}
+
+statement transaction line.pending amount {
+  color: var(--humbleColor);
+}
+
+
+
+
+#svg283 {
+  height: 35vh;
+  max-width: 100%;
+}
+
+
+@keyframes card_rotate1 {
+  0% {
+    transform: matrix(0.74892, 0, 0, 0.74892, 469, 52.961);
+  }
+
+  100% {
+    transform: matrix(0.7237051, 0.19271262, -0.19271262, 0.7237051, 469.30371, 147.85122);
+  }
+}
+
+@keyframes card_rotate2 {
+  0% {
+    transform: matrix(1, 0, 0, 1.0289, -301.12, -142.65);
+  }
+
+  100% {
+    transform: matrix(0.83263515, 0.5538219, -0.56984929, 0.85673128, -97.315906, -327.24178);
+  }
+}
+
+
+
+
+#g8615 {
+  animation: card_rotate1 1s normal forwards;
+}
+
+
+#g8894 {
+  animation: card_rotate2 1s normal forwards;
+}
+
+
+
+
+
+iframe.tc {
+  min-width: 100vw;
+  height: calc(100vh - 30vw);
+}
+
+
+
+.invisible {
+  visibility: hidden;
+}
+
+
+
+
+
+spinner {
+  animation: rotation 2s infinite linear;
+  display: block;
+}
+
+
+
+racecars {
+  width: 40vw;
+  height: 40vw;
+  margin: auto;
+  display: flex;
+  margin-top: 3rem;
+}
+
+
+racecar {
+  position: absolute;
+  display: flex;
+  width: 43vw;
+  height: 30vw;
+  border-radius: 50%;
+  margin: auto;
+  animation: rotation 2s infinite linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}

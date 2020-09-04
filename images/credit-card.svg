@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   role="img"
+   width="50.726562"
+   height="35.287556"
+   viewBox="0 0 25.363281 17.643778"
+   aria-labelledby="creditCardIconTitle"
+   version="1.1"
+   id="svg7"
+   sodipodi:docname="credit-card.svg"
+   style="color:#126868;fill:none;stroke:#126868;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Credit Card</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs11" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     id="namedview9"
+     showgrid="false"
+     inkscape:zoom="10.154226"
+     inkscape:cx="52.28847"
+     inkscape:cy="-5.0881063"
+     inkscape:window-x="3840"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7" />
+  <title
+     id="creditCardIconTitle">Credit Card</title>
+  <path
+     style="color:#126868;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#126868;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     d="M 5 0 C 2.2472972 0 0 2.2472972 0 5 L 0 25 C 0 27.752702 2.2472972 30 5 30 L 8.7265625 30 L 8.7265625 28 L 5 28 C 3.3207028 28 2 26.679298 2 25 L 2 20.658203 L 8.2890625 20.658203 L 8.2890625 17.732422 L 2 17.732422 L 2 5 C 2 3.3207028 3.3207028 2 5 2 L 37 2 C 38.679298 2 40 3.3207028 40 5 L 40 6.1328125 L 42 6.1328125 L 42 5 C 42 2.2472972 39.752702 0 37 0 L 5 0 z "
+     transform="scale(0.5)"
+     id="rect3" />
+  <path
+     id="rect1801"
+     style="fill:#126868;fill-opacity:1;stroke:#126868;stroke-width:0.42088303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 5.4883981,11.640093 H 24.204834 v 1.026385 H 5.4883981 Z M 4.8632608,12.566697 H 24.86326 M 6.8632815,2.6437769 c -1.376352,0 -2.5,1.1236487 -2.5,2.5 V 15.143777 c 0,1.376352 1.123648,2.5 2.5,2.5 H 22.863281 c 1.376352,0 2.5,-1.123648 2.5,-2.5 V 5.1437769 c 0,-1.3763513 -1.123648,-2.4999999 -2.5,-2.5 z m 0,1 H 22.863281 c 0.839649,0 1.5,0.6603514 1.5,1.5 V 15.143777 c 0,0.839649 -0.660351,1.5 -1.5,1.5 H 6.8632815 c -0.839649,0 -1.5,-0.660351 -1.5,-1.5 V 5.1437769 c 0,-0.8396486 0.660351,-1.4999999 1.5,-1.5 z" />
+</svg>

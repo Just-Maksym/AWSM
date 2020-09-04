@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="theApp" id='myHTML'>
+
+<head xmlns:ng="http://angularjs.org" id="ng-app" lang="en">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, height=device-height" />
+	<!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self'; style-src 'self' data: 'unsafe-inline'; img-src 'self' data: https://online.awsmbank.com https://ssl.gstatic.com https://www.google-analytics.com; media-src 'self' data: https://online.awsmbank.com; font-src *; connect-src 'self' wss://online.awsmbank.com https://online.awsmbank.com "> -->
+	<!-- <meta http-equiv="Content-Security-Policy" content="connect-src 'self' https://online.awsmbank.com;"> -->
+	<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://online.awsmbank.com/*; script-src 'self'; style-src 'self'; img-src 'self' data: https://online.awsmbank.com/*; media-src 'self' data: https://online.awsmbank.com/*; frame-src 'none'; font-src 'self' data:; connect-src 'self' https://online.awsmbank.com/*"> -->
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+
+	<title>AWSM</title>
+
+
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-5.2.css">
+	<link rel="stylesheet" href="css/material.css">
+
+	<link rel="stylesheet" type="text/css" href="css/ft.css" />
+	<link rel="stylesheet" type="text/css" href="css/mob.css" />
+	<link rel="stylesheet" type="text/css" href="css/whte.css" />
+	<link rel="stylesheet" type="text/css" href="css/jyst.css" />
+	<link rel="stylesheet" type="text/css" href="css/hey.css" />
+	<link rel="stylesheet" type="text/css" href="css/dark.css" />
+
+
+
+	<script type="application/javascript" src="js/lib/deepCopy_min.js"></script>
+	<script type="application/javascript" src="js/lib/lz-string.min.js"></script>
+	<script type="application/javascript" src="js/lib/angular.min.js"></script>
+	<script type="application/javascript" src="js/lib/angular-route.js"></script>
+	<script type="application/javascript" src="js/lib/moment.min.js"></script>
+	<script type="application/javascript" src="js/lib/cleave-angular.min.js"></script>
+
+
+
+	<script type="application/javascript" src="js/testweb.js"></script>
+
+
+	<script type="application/javascript" src="model/modelBank.js"></script>
+	<script type="application/javascript" src="model/model_statics.js"></script>
+
+	<script type="application/javascript" src="js/test.js"></script>
+
+	<script type="application/javascript" src="js/app.js"></script>
+	<script type="application/javascript" src="js/appFilters.js"></script>
+
+ 
+ 
+
+
+</head>
+
+<body ng-controller="GeneralController">
+
+	<div ng-if="thisDevice.isDeviceReady">
+
+		<ng-view />
+	</div>
+
+	<div ng-if="!thisDevice.isDeviceReady">
+		<!-- AWSM Index -->
+	</div>
+
+</body>
+
+</html>

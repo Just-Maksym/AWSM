@@ -1,0 +1,261 @@
+:root {
+    /* --bgd: #166471; */
+    --bgd: #86dbd6;
+    /* --bkg: #404040; */
+    --bkg: #2a2a2a;
+    --bkg-dark: #292929;
+    --humbleColor: grey;
+    --h: #656565;
+    --action: #b8b8b8;
+    --creditFg: greenyellow;
+    --creditBg: #35881b;
+    --debitFg: #df3d3d;
+    --debitBg: #5b1515;
+    --green: greenyellow;
+    --red: #df3d3d;
+    --redontile: #ffa0a0;
+    --txt: #d6dde2;
+    --butt: #565454;
+    --darkgreen: #5ddb14;
+}
+
+body {}
+
+box {
+    border: 1px solid #636464;
+    box-shadow: 0 4px 5px 0 rgba(88, 85, 85, 0.32);
+}
+
+boxes box.xlarge.whiteaccount {
+    box-shadow: 0 5px 3px 0 rgba(101, 101, 101, 0.35);
+}
+
+decimal {
+    opacity: 0.7;
+}
+
+input {
+    background-color: #555454;
+}
+
+toppanel {
+    background-color: #454545;
+    box-shadow: 0px 0px 26px 1px rgb(88, 87, 88);
+}
+
+bottompanel.ng-scope {
+    background-color: black;
+    box-shadow: 0px 0px 26px 1px rgb(58, 58, 58);
+}
+
+infobox {
+    background-color: #424549;
+    border: 1px solid #9b9b9b;
+    color: #000e45;
+}
+
+box.empty {
+    background-color: unset;
+    border-radius: 1vw;
+}
+
+box.unimportant {
+    background-color: #464343;
+    color: var(--txt);
+    border: 1px solid #565656;
+}
+
+statement transaction line amount {
+    color: white;
+}
+
+box.whiteaccount>plashka {
+    background-color: #525050;
+}
+
+universaladdbutton {
+    color: white;
+    box-shadow: 0px 2px 18px 0px rgb(131, 240, 112);
+}
+
+statement transaction line.zoomed {
+    background-color: #454444;
+}
+
+statement transaction trandetails {
+    background-color: #454444;
+}
+
+box.whiteaccount>plashka>advice {
+    color: #dddddd;
+}
+
+box.whiteaccount>plashka>currentgoal>current {
+    color: var(--darkgreen);
+}
+
+box.whiteaccount>plashka>currentgoal>goal {
+    color: white;
+}
+
+progressbar>bar {
+    border: 1px solid #666666;
+}
+
+minicardcircle.medium>circle {
+    background-color: #7acd7a;
+    background-color: unset;
+    width: 19vw;
+    height: 19vw;
+    margin-left: -3vw;
+    z-index: 1;
+    box-shadow: 0px 2px 55px 0px rgb(131, 240, 112);
+}
+
+circle.green>face.mini>img {
+    border: 1vw solid #28ee37;
+}
+
+minicardcircle>circle>face.mini {
+    border: unset;
+}
+
+minicardcircle.medium>circle.red {
+    background-color: #df98bf;
+    background-color: #7acd7a;
+    background-color: unset;
+    width: 19vw;
+    height: 19vw;
+    margin-left: 1vw;
+    z-index: 1;
+    box-shadow: 0px 2px 55px 0px #df98bf;
+}
+
+input {
+    color: var(--txt);
+    box-shadow: inset 0 0 2vw 1vw #7977778c;
+}
+
+minicardcircle>circle.red>face>img {
+    border: 1vw solid #FF547F;
+}
+
+box.face.larger>img {}
+
+box.face.larger {
+    border: 1vw solid #d1cece;
+    box-shadow: 0 4px 36px 0 rgba(203, 203, 203, 0.43);
+}
+
+box.square bottompit {
+    color: black;
+}
+
+bottompanel>but.chosen {
+    color: white;
+}
+
+toppanel>onoff>i {
+    color: #8993f6;
+}
+
+div>iconbutton>svg {
+    /* stroke: red !important; */
+    /* color: red !important; */
+}
+
+svg.feather.feather-filter {
+    stroke: white;
+    stroke: var(--txt);
+}
+
+input.amount {
+    color: white;
+}
+
+
+
+.mainscreen boxes.faces box.large.face>name {
+    color: black;
+}
+
+minicardcircle>circle>face.mini>name {
+    color: black;
+}
+
+input.ng-invalid {
+    background-color: #6e5858;
+}
+
+input.invalid {
+    background-color: #6e5858;
+}
+
+
+g#device-mockup {
+    stroke: rgb(214, 221, 226);
+}
+
+bottompanel>but>svg>g {
+    stroke: rgb(214, 221, 226);
+}
+
+bottompanel>but>svg>circle {
+    stroke: rgb(214, 221, 226);
+}
+
+
+
+pavlovreward {
+    background-color: #565656;
+}
+
+pavlovreward>left {
+    background-color: #4e5654;
+}
+
+.scroller>boxcard>card {
+    box-shadow: 0px 1vw 2vw 0px rgb(0, 0, 0);
+}
+
+
+
+
+
+
+pinboxes>pinbox {
+    color: black;
+}
+
+pinboxes>pinbox {
+    color: black;
+}
+
+.lastMessages .message {
+    color: black;
+    /* box-shadow: 0px 2px 31px 0px rgba(255, 210, 74, 1); */
+}
+
+
+
+
+
+
+
+jobideas jobidea {
+    background-color: #414940;
+    box-shadow: 1vw 1vw 3vw 1vw rgb(225 224 224 / 10%);
+}
+
+
+boxes .job .jobname {
+    text-shadow: -1px 0px 8px #4f4f4f;
+}
+
+boxes.large.scrollable>div.scroller>box.job {
+    background-color: #4f4f4f;
+}
+
+box.job>plashka {
+    background-color: #414141;
+}
